@@ -94,5 +94,5 @@ app.post('/complete-topic/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server đang chạy tại ${isProduction ? 'https://hoctapthuduc.onrender.com' : 'http://localhost:' + PORT}`);
+    console.log(`Server đang chạy tại ${isProduction ? 'https://luyenlaptrinh.onrender.com' : 'http://localhost:' + PORT}`);
 });
