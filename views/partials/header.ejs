@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | AlgoMind</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/visualizer.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <!-- CSS của Prism.js - Mặc định là theme sáng -->
+    <link id="prism-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+
+    <!-- SCRIPT CHỐNG "LÓE" GIAO DIỆN -->
+    <!-- Phải đặt ở đây, trước khi body được render -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+
+            const prismTheme = theme === 'dark' 
+                ? 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css'
+                : 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css';
+            document.getElementById('prism-theme').href = prismTheme;
+        })();
+    </script>
+
+    <!-- Prism.js JS - Deferred for non-blocking load -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <%- include('sidebar', { currentTopicId: activePage }) %>
+
+        <div class="main-content-wrapper">
+            <header class="header">
+                <div class="header-content">
+                    <h1><%= title %></h1>
+                </div>
+                <!-- NÚT CHUYỂN ĐỔI THEME -->
+                <div class="theme-switcher-container">
+                    <label class="theme-switcher">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </header>
+            <main class="main-content">

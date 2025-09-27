@@ -1,0 +1,35 @@
+            </main>
+        </div> <!-- .main-content-wrapper -->
+    </div> <!-- .container -->
+
+    <!-- JS của Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+
+    <!-- SCRIPT LOGIC CỦA THEME SWITCHER -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const prismThemeLink = document.getElementById('prism-theme');
+            
+            // Đặt trạng thái ban đầu của nút toggle
+            if (localStorage.getItem('theme') === 'dark') {
+                themeToggle.checked = true;
+            }
+
+            themeToggle.addEventListener('change', function () {
+                if (this.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    prismThemeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    prismThemeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

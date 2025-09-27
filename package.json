@@ -1,0 +1,16 @@
+{
+  "name": "algomind",
+  "version": "1.0.0",
+  "description": "Website học Đệ quy và Quy hoạch động cho Olympic Tin học.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.18.2"
+  }
+}

@@ -1,0 +1,89 @@
+<%- include('partials/header', { title: title, activePage: activePage }) %>
+
+<div class="visualizer-container">
+    <div class="controls-section">
+        <div class="control-row">
+            <label for="algorithm-select">Chọn thuật toán:</label>
+            <select id="algorithm-select">
+            </select>
+        </div>
+
+        <div class="control-row" id="array-row">
+            <label for="array-input">Dữ liệu đầu vào (mảng, cách nhau bởi dấu phẩy):</label>
+            <input type="text" id="array-input" placeholder="Ví dụ: 1, 2, 3, 4, 5">
+        </div>
+
+        <div class="control-row" id="graph-row">
+            <label for="node-count">Số lượng node:</label>
+            <input type="number" id="node-count" min="2" max="10" value="7">
+        </div>
+
+        <div class="control-row" id="graph-grid-row">
+            <label>Ma trận kề (đồ thị):</label>
+            <div id="graph-grid-container"></div>
+            <button id="generate-graph-btn" style="margin-top: 0.5rem;">Tự động tạo dữ liệu</button>
+        </div>
+
+        <div class="control-row" id="target-row">
+            <label for="target-input" id="target-label">Giá trị cần tìm / Nguồn (cho Dijkstra/BFS/DFS):</label>
+            <input type="number" id="target-input" placeholder="Ví dụ: 0 (node bắt đầu)">
+        </div>
+
+        <div class="control-row">
+            <button id="start-btn">Bắt đầu</button>
+            <button id="back-btn" disabled>Quay lại</button>
+            <button id="next-btn" disabled>Tiếp theo</button>
+            <button id="play-btn" disabled>▶️ Tự động chạy</button>
+            <label for="speed-slider" style="min-width: auto;">Tốc độ:</label>
+            <input type="range" id="speed-slider" min="100" max="2000" value="1000" step="100" disabled>
+            <span id="speed-value">1.0s</span>
+            <button id="reset-btn">Đặt lại</button>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="code-section">
+            <h3>Mã nguồn (C++)</h3>
+            <pre class="line-highlight"><code id="code-display"></code></pre>
+        </div>
+
+        <div class="visualization-section">
+            <div id="log-message">Chọn một thuật toán, kiểm tra dữ liệu và nhấn "Bắt đầu".</div>
+            <h3>Mô phỏng</h3>
+            <div id="visualization-area"></div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="step-list-container">
+            <h4>Các bước thực hiện</h4>
+            <ul id="steps-list"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="/js/algorithms/lis.js"></script>
+<script src="/js/algorithms/quicksort.js"></script>
+<script src="/js/algorithms/bubblesort.js"></script>
+<script src="/js/algorithms/mergesort.js"></script>
+<script src="/js/algorithms/insertionsort.js"></script>
+<script src="/js/algorithms/selectionsort.js"></script>
+<script src="/js/algorithms/heapsort.js"></script>
+<script src="/js/algorithms/countingsort.js"></script>
+<script src="/js/algorithms/radixsort.js"></script>
+<script src="/js/algorithms/dijkstra.js"></script>
+<script src="/js/algorithms/bellmanford.js"></script>
+<script src="/js/algorithms/floydwarshall.js"></script>
+<script src="/js/algorithms/bfs.js"></script>
+<script src="/js/algorithms/dfs.js"></script>
+<script src="/js/algorithms/kruskal.js"></script>
+<script src="/js/algorithms/prim.js"></script>
+<script src="/js/algorithms/topologicalsort.js"></script>
+<script src="/js/algorithms/scc.js"></script>
+<script src="/js/algorithms/binarysearch.js"></script>
+<script src="/js/algorithms/linearsearch.js"></script>
+<script src="/js/algorithms/interpolationsearch.js"></script>
+<script src="/js/algorithms/greedy.js"></script>
+<script src="/js/visualizer.js"></script>
+
+<%- include('partials/footer') %>

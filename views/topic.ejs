@@ -1,0 +1,21 @@
+<%- include('partials/header', { title: title, activePage: activePage }) %>
+
+<div class="content-box">
+    <%- topic.content %>
+</div>
+
+<%- include('partials/footer') %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.querySelector('.sidebar');
+    const activeLink = document.querySelector('.sidebar a.active');
+    if (activeLink && sidebar) {
+        const offsetTop = activeLink.offsetTop - sidebar.offsetTop;
+        sidebar.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+});
+</script>

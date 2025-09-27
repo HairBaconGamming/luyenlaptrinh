@@ -1,0 +1,112 @@
+<aside class="sidebar">
+    <h2><a href="/" style="text-decoration: none; color: inherit;">Lộ trình Học tập</a></h2>
+    
+    <h3>Nền tảng</h3>
+    <ul>
+        <!-- You can add foundation links here -->
+    </ul>
+    
+    <h3>Đệ quy</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'de-quy') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Tư duy Thuật toán</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'tu-duy-thuat-toan') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Quy hoạch động</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'quy-hoach-dong') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Nhị phân</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'nhi-phan') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Tham Lam</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'tham-lam') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Đồ thị</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'do-thi') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Ứng dụng Thuật toán</h3>
+    <ul>
+        <% for (let i = 0; i < topics.length; i++) { %>
+            <% let topic = topics[i]; %>
+            <% if (topic.category === 'ung-dung-thuat-toan') { %>
+                <li>
+                    <a href="/topic/<%= topic.id %>" class="<%= currentTopicId === topic.id ? 'active' : '' %>">
+                        <%= topic.title %>
+                    </a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h3>Công cụ</h3>
+    <ul>
+        <li><a href="/visualize">Mô phỏng Thuật toán</a></li>
+        <li><a href="/practice">Luyện tập</a></li>
+    </ul>
+</aside>

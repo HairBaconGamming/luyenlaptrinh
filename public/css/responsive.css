@@ -1,0 +1,150 @@
+/* ========================================= */
+/* === RESPONSIVE DESIGN                 === */
+/* ========================================= */
+
+/* Tablet and smaller */
+@media (max-width: 1024px) {
+    .content-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .control-row label {
+        min-width: 150px;
+        font-size: 0.9rem;
+    }
+
+    .vis-element-container {
+        gap: 0.25rem;
+    }
+
+    .vis-box {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    .graph-grid input {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .main-content-wrapper {
+        height: auto;
+    }
+
+    .header {
+        padding: 0.75rem 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .visualizer-container {
+        gap: 1rem;
+    }
+
+    .controls-section,
+    .code-section,
+    .visualization-section,
+    .info-section {
+        padding: 1rem;
+    }
+
+    .control-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .control-row label {
+        min-width: auto;
+        text-align: left;
+    }
+
+    .vis-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .vis-label {
+        min-width: auto;
+        text-align: left;
+    }
+
+    .bar-wrapper {
+        margin: 0 0.25rem;
+    }
+
+    .vis-bar {
+        width: 25px;
+    }
+
+    .pointer {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 1rem 0.5rem;
+    }
+
+    .sidebar h2 {
+        font-size: 1.1rem;
+    }
+
+    .sidebar li a,
+    .sidebar-nav li a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .graph-grid {
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    }
+
+    .graph-grid input {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .vis-box {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .bar-value {
+        font-size: 0.7rem;
+    }
+
+    .vis-bar {
+        width: 20px;
+    }
+}
